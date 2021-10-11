@@ -3,3 +3,4 @@
 - Cmake VERSION 3.19
 - Boost VERSION 1.76.0
 - libprotoc 3.17.3
+- mysqlcppconn 9.8.0.26
