@@ -5,6 +5,7 @@
 - Cmake VERSION 3.19
 - Boost VERSION 1.76.0
 - libprotoc 3.17.3
+- grpc 1.41
 - mysqlcppconn 9.8.0.26
 
 ### System components:

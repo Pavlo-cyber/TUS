@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package TUS.DOM.User;
+
+message User
+{
+  uint64 id = 10;
+  string name = 20;
+}
+
+service Empty
+{
+
+}
