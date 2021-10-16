@@ -1,6 +1,14 @@
 # git
 .idea
+
 # CMake
 cmake-build-debug
 build
 debug
+
+# generated code
+gen
+
+# python
+.venv
+venv

@@ -8,7 +8,6 @@ set(DOM.Grpc_TARGET ${PROJECT_NAME})
 
 # creating necessary directories in case they don't exist
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/gen/cpp)
-file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/gen/js)
 
 # set source
 set(SOURCE_FILES "")
