@@ -2,7 +2,7 @@
 // Created by ivan on 16.10.21.
 //
 
-#include "../inc/UserService.h"
+#include "tus/cms/core/UserService.h"
 #include "google/protobuf/util/json_util.h"
 
 grpc::Status tus::cms::core::UserServiceImpl::GetUser(grpc::ServerContext *context, const tus::dom::UInt64 *request,
