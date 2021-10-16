@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-import "dom/User.proto";
-import "dom/Framework.proto";
+import "tus/dom/User.proto";
+import "tus/dom/Framework.proto";
 
 package tus.cms;
 
