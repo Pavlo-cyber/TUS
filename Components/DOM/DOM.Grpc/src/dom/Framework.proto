@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package tus.dom;
+
+
+enum StatusCode
+{
+  Fail = 0;
+  Success = 5;
+}
+
+message RequestType
+{
+  string MetaData = 10;
+}
+
+message ResponseType
+{
+  string Msg = 10;
+  StatusCode StatusCode = 20;
+}
+
+/* Standard types */
+message String
+{
+  string string = 1;
+}
+
+message UInt64
+{
+  uint64 uint64 = 1;
+}
+
+message UInt32
+{
+  uint32 uint32 = 1;
+}
+
+message Int32
+{
+  int32 int32 = 1;
+}
+
+message Int64
+{
+  int64 int64 = 1;
+}
+
+message Double
+{
+  double double = 1;
+}
+
+message Float
+{
+  float float = 1;
+}
+
+message Bool
+{
+  bool bool = 1;
+}

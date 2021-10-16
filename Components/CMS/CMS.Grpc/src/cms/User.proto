@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "dom/User.proto";
+import "dom/Framework.proto";
+
+package tus.cms;
+
+service UserService
+{
+  rpc GetUser(tus.dom.UInt64) returns (tus.dom.User);
+  rpc SetUser(tus.dom.User) returns (tus.dom.ResponseType);
+}
+
