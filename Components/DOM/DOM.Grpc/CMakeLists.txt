@@ -15,7 +15,7 @@ set(SOURCE_FILES "")
 # generate cpp protobuf/grpc
 generate_cpp_proto(
         ${CMAKE_CURRENT_SOURCE_DIR}/src
-        ${CMAKE_CURRENT_SOURCE_DIR}/gen/cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/gen/cpp "")
 list(APPEND SOURCE_FILES ${GENERATED_SOURCE_FILES})
 
 
