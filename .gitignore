@@ -12,3 +12,6 @@ gen
 # python
 .venv
 venv
+
+# node
+node_modules

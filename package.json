@@ -1,0 +1,7 @@
+{
+  "name": "TUS",
+  "version": "1.0.0",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.4.1"
+  }
+}
