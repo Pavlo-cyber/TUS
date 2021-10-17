@@ -11,19 +11,19 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema Database
+-- Schema TUS_DB
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema Database
+-- Schema TUS_DB
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Database` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `Database` ;
+CREATE SCHEMA IF NOT EXISTS `TUS_DB` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `TUS_DB` ;
 
 -- -----------------------------------------------------
--- Table `Database`.`CV`
+-- Table `TUS_DB`.`CV`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Database`.`CV` (
+CREATE TABLE IF NOT EXISTS `TUS_DB`.`CV` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `text` VARCHAR(2000) NOT NULL,
   `rating` FLOAT NOT NULL,
@@ -35,9 +35,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `Database`.`User`
+-- Table `TUS_DB`.`User`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Database`.`User` (
+CREATE TABLE IF NOT EXISTS `TUS_DB`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(30) NOT NULL,
   `last_name` VARCHAR(30) NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `Database`.`User` (
   INDEX `fk_User_CV1_idx` (`CV_id` ASC) VISIBLE,
   CONSTRAINT `fk_User_CV1`
     FOREIGN KEY (`CV_id`)
-    REFERENCES `Database`.`CV` (`id`)
+    REFERENCES `TUS_DB`.`CV` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -64,9 +64,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `Database`.`Reviews`
+-- Table `TUS_DB`.`Reviews`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Database`.`Reviews` (
+CREATE TABLE IF NOT EXISTS `TUS_DB`.`Reviews` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `text` VARCHAR(100) NOT NULL,
   `state` INT NOT NULL,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `Database`.`Reviews` (
   INDEX `fk_Reviews_User_idx` (`User_id` ASC) VISIBLE,
   CONSTRAINT `fk_Reviews_User`
     FOREIGN KEY (`User_id`)
-    REFERENCES `Database`.`User` (`id`)
+    REFERENCES `TUS_DB`.`User` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -85,9 +85,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `Database`.`Sybject`
+-- Table `TUS_DB`.`Sybject`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Database`.`Sybject` (
+CREATE TABLE IF NOT EXISTS `TUS_DB`.`Sybject` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(25) NOT NULL,
   `CV_id` INT NOT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `Database`.`Sybject` (
   INDEX `fk_Sybject_CV1_idx` (`CV_id` ASC) VISIBLE,
   CONSTRAINT `fk_Sybject_CV1`
     FOREIGN KEY (`CV_id`)
-    REFERENCES `Database`.`CV` (`id`)
+    REFERENCES `TUS_DB`.`CV` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
