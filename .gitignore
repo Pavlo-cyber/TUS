@@ -1,6 +1,6 @@
 # git
 .idea
-
+.DS_Store
 # CMake
 cmake-build-debug
 build
@@ -15,3 +15,4 @@ venv
 
 # node
 node_modules
+
