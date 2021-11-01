@@ -18,5 +18,16 @@ target_include_directories(${DSS.Core_TARGET}
 # mysql connector
 find_library(MYSQLCONNECTOR_LIBRARY NAMES mysqlcppconn REQUIRED)
 
+if(APPLE)
+    set(OPENSSL_ROOT_DIR "/usr/local/openssl@1.1")
+    set(OPENSSL_CRYPTO_LIBRARY "/usr/local/openssl@1.1/1.1.1l_1/lib/libcrypto.1.1.dylib")
+    set(OPENSSL_SSL_LIBRARY "/usr/local/openssl@1.1/1.1.1l_1/lib/libssl.1.1.dylib")
+    set( OPENSSL_INCLUDE_DIR /usr/local/openssl@1.1/1.1.1l_1/include)
+    find_package(OpenSSL REQUIRED)
+    message("----${OPENSSL_LIBRARIES}")
+    target_link_libraries(${PROJECT_NAME} PUBLIC ${OPENSSL_LIBRARIES})
+endif()
+
+
 target_link_libraries(${DSS.Core_TARGET}
         PUBLIC ${MYSQLCONNECTOR_LIBRARY})

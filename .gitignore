@@ -1,10 +1,12 @@
 # git
 .idea
+.DS_Store
 
 # CMake
 cmake-build-debug
 build
 debug
+CMakeCache.txt
 
 # generated code
 gen

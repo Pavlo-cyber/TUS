@@ -7,8 +7,8 @@
 tus::dss::core::DataBase::DataBase()
 {
     const std::string hostname = "localhost";
-    const std::string userName = "ivan";
-    const std::string password = "LaVuna2002$";
+    const std::string userName = "pavlo";
+    const std::string password = "1111";
     const std::string database = "TUS_DB";
 
     m_driver = get_driver_instance();
